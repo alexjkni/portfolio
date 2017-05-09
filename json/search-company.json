@@ -1,0 +1,14 @@
+{
+    "search-company": {
+        "id": "search-company",
+        "displayName": "Search Company",
+        "url":"work/searchCompany",
+        "urlText":"work/searchCompany",
+        "images": {
+            "1": "1.jpg",
+            "2": "a.jpg",
+            "3": "a.jpg"
+        },
+        "detail": "Search Company is a mini tool created as part of a starter project to get into the world of PHP Frameworks.\\nThe Search Company tool is built within the PHP Laravel Framework which hooks into The Company House API which takes in a string and returns JSON formatted data.\\nThe returned data is then displayed using angularJS in order to provide the user with a system which searches an external database and updates the results in real-time.\\n"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "Chronos": {
+        "id": "chronos",
+        "displayName": "Chronos",
+        "url":"http://www.chronosenergy.co.uk",
+        "urlText":"chronosenergy.co.uk",
+        "images": {
+            "1": "1.jpg",
+            "2": "a.jpg",
+            "3": "a.jpg"
+        },
+        "imageHeights": {
+            "1": "400"
+        },
+        "detail": "Chronos Energy & Utilities is a recruitment company based in Birmingham.\\nI was approached by Tom Watts (the founder) to design & develop a new site utilising WordPress as the CMS.\\nThis involved using Adobe Photoshop to create a new design around their requirements\\nThe Development process involves creating a new theme using the PHP environment that WordPress is developed in."
+    }
+}
