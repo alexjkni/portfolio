@@ -574,12 +574,9 @@ function mainFunction() {
     
     techBars.find('p').each(function() {
         
-        techP.push(this.textContent);
-        this.textContent = '0%';
+        techP.push(this);
         
     });
-    
-    akConsole.dir(techP);
 
     $(window).scroll(function () {
 
@@ -617,17 +614,37 @@ function mainFunction() {
 
         jQuery('#my-tech-container .tech-bar-fill').each(function (index) {
 
-            var curElem, newVal, animTime;
-            
-            akConsole.log(index);
+            var curElem, newVal, animTime, countTo, elemToCountUp, animObj;
 
             animTime = Math.floor(Math.random()*(2500-2000+1)+2000);
             curElem = jQuery(this);
-            newVal = techP[index];
+            newVal = techP[index].textContent + '%';
             
-            var animObj = attr ? {"height": newVal} : {"width": newVal};
+            countTo = techP[index].textContent;
             
-            akConsole.dir(techBars[index]);
+            var elemToCountUp = jQuery(techBars[index]).find('p');
+            
+            jQuery({countNum: 0}).animate({
+                
+                countNum: countTo
+                
+            },{
+                
+                duration:animTime,
+                easing:'easeOutBounce',
+                step: function() {
+                    
+                    elemToCountUp.text(Math.floor(this.countNum) + '%');
+                    
+                },
+                complete: function() {
+                    
+                    elemToCountUp.text(this.countNum + '%');
+                    
+                }
+            });
+            
+            animObj = attr ? {"height": newVal} : {"width": newVal};
             
             curElem.animate(animObj , animTime, 'easeOutBounce');
 
@@ -636,3 +653,29 @@ function mainFunction() {
     }
 
 }
+
+/*
+$('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 8000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+  
+});
+*/

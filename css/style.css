@@ -64,7 +64,7 @@ h1 {
 
 #top-header .cv-link {
     font-size:14px;
-    margin-top: 420px;
+    margin-top: 410px;
     text-decoration: none;
 }
 
@@ -396,8 +396,7 @@ h3 {
 
 #my-tech-container {
     margin: 0 auto;
-    width: 900px;
-    height: 500px;
+    width: 900px;height: 520px;
 }
 
 #my-tech-container .tech-bar-cont {
@@ -413,8 +412,8 @@ h3 {
 }
 
 #my-tech-container .tech-bar-cont p {
-    display: none;
-    position: absolute;
+    display: block;
+    position: relative;
     text-align: center;
     width: 100%;
 }
@@ -1041,10 +1040,19 @@ h3 {
     }
     
     #my-tech-container .tech-bar-cont h5 {
-        font-size:1.4em;
+        display: inline-block;
+        font-size: 1.4em;
         margin-bottom: 7.5px;
         position: relative;
         text-align: left;
+        width: 49%;
+    }
+    
+    #my-tech-container .tech-bar-cont p {
+        display: inline-block;
+        position: relative;
+        text-align: right;
+        width: 49%;
     }
     
     #my-tech-container .tech-bar {

@@ -171,7 +171,7 @@
                 
                     <h5 class="pos-ab">HTML</h5>
                     
-                    <p>100%</p>
+                    <p>100</p>
                     
                     <div class="tech-bar pos-ab">
                     
@@ -185,7 +185,7 @@
                 
                     <h5 class="pos-ab">CSS</h5>
                     
-                    <p>100%</p>
+                    <p>100</p>
                     
                     <div class="tech-bar pos-ab">
                     
@@ -199,7 +199,7 @@
                 
                     <h5 class="pos-ab">JavaScript</h5>
                      
-                     <p>100%</p>
+                     <p>100</p>
                     
                     <div class="tech-bar pos-ab">
                     
@@ -213,7 +213,7 @@
                 
                     <h5 class="pos-ab">jQuery</h5>
                     
-                    <p>90%</p>
+                    <p>90</p>
                     
                     <div class="tech-bar pos-ab">
                     
@@ -227,7 +227,7 @@
                 
                     <h5 class="pos-ab">angularJs</h5>
                     
-                    <p>30%</p>
+                    <p>30</p>
                     
                     <div class="tech-bar pos-ab">
                     
@@ -241,7 +241,7 @@
                 
                     <h5 class="pos-ab">PHP</h5>
                     
-                    <p>60%</p>
+                    <p>60</p>
                     
                     <div class="tech-bar pos-ab">
                     
@@ -255,7 +255,7 @@
                 
                     <h5 class="pos-ab">nodeJs</h5>
                     
-                    <p>30%</p>
+                    <p>30</p>
                     
                     <div class="tech-bar pos-ab">
                     
@@ -269,7 +269,7 @@
                 
                     <h5 class="pos-ab">SQL</h5>
                     
-                    <p>43%</p>
+                    <p>43</p>
                     
                     <div class="tech-bar pos-ab">
                     
@@ -283,7 +283,7 @@
                 
                     <h5 class="pos-ab">WordPress</h5>
                     
-                    <p>90%</p>
+                    <p>90</p>
                     
                     <div class="tech-bar pos-ab">
                     
