@@ -23,17 +23,18 @@
             display:block;
             font-family: verdana;
             position:fixed;
-            margin:-20px 0 0 -20px;
-            top:50%;left:50%;
-            width:auto;height:auto;
+            margin:-20px 0 0 0;
+            top:50%;left:0;
+            width:100%;height:auto;
         }
         #main-loader img {
             display:block;
             margin: 0 auto;
-            width:40px;
+            width:3vw;
         }
         #main-loader p {
-            margin:20px 0 !important;
+            font-size:1vw;
+            text-align: center;
         }
         body.hidden > * {
             display:none;
