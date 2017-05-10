@@ -15,7 +15,7 @@ function getFileFromPath($path ,$fileNameArr) {
     
     foreach($fileNameArr as $fileName) {
         
-        echo "<link rel='stylesheet' href='" . $path . $fileName . "'>";
+        echo '<noscript><link rel="stylesheet" href="' . $path . $fileName. '"></noscript>';
         
     }
     

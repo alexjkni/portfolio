@@ -10,14 +10,37 @@ akConsole.log('Loading DOM');
 
 jQuery(document).ready(function () {
     
-    var eTimer;
+    var eTimer, arrCSS;
 
     akConsole.log(akToolKit.checkExecTime(sTimer));
 
     akConsole.fun(mainFunction);
+    
+    arrCSS = ['reset.css', 'style.css'];
+    
+    loadCSS(arrCSS);
     mainFunction();
 
 });
+
+function loadCSS(arr) {
+    
+    var elemCSS, docHead, elemArr;
+    
+    elemArr = [];
+    docHead = document.getElementsByTagName('head')[0];
+    
+    for (var i = 0; i < arr.length; i++) {
+        
+        elemCSS = document.createElement('link');
+        elemCSS.setAttribute('rel', 'stylesheet');
+        elemCSS.setAttribute('href', './css/' + arr[i]);
+        
+        docHead.append(elemCSS);
+        
+    }
+
+}
 
 function mainFunction() {
     
