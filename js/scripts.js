@@ -20,6 +20,8 @@ jQuery(document).ready(function () {
     
     loadCSS(arrCSS);
     mainFunction();
+    
+    jQuery(document).bind("mobileinit", function(){$.extend(  $.mobile , {autoInitializePage: false})});
 
 });
 
