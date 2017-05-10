@@ -2,6 +2,14 @@ body {
     color:#1c1c1c;
 }
 
+body.hidden > * {
+    display:block;
+}
+
+#main-loader {
+    display:none;
+}
+
 body.noscroll {
     overflow: hidden;
     touch-action: none;
@@ -538,6 +546,7 @@ h3 {
 
 #aPopUpOverlay {
     background: rgba(0, 0, 0, 0.7);
+    display:none;
     margin: -99999px -99999px;
     width: 100%;
     height: 100%;
@@ -560,6 +569,7 @@ h3 {
     background: #FFF;
     border: 1px solid #000;
     border-radius: 3px;
+    display: none;
     left: 50%;
     top: 50%;
     margin: -99999px -99999px;
@@ -570,7 +580,6 @@ h3 {
 }
 
 #aPopUp.change {
-    display: block;
     margin: -275px 0px 0px -325px;
 }
 

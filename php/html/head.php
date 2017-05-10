@@ -1,5 +1,6 @@
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Cache-control" content="public">
 
     <title><?php echo $SITENAME; ?></title>
     <meta name="description" content="<?php echo $SITENAME; ?>">
@@ -16,5 +17,27 @@
         require('htmlshiv.php'); 
     
     ?>
+    
+    <style>
+        #main-loader {
+            display:block;
+            font-family: verdana;
+            position:fixed;
+            margin:-20px 0 0 -20px;
+            top:50%;left:50%;
+            width:auto;height:auto;
+        }
+        #main-loader img {
+            display:block;
+            margin: 0 auto;
+            width:40px;
+        }
+        #main-loader p {
+            margin:20px 0 !important;
+        }
+        body.hidden > * {
+            display:none;
+        }
+    </style>
 
 </head>

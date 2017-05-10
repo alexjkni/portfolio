@@ -5,7 +5,7 @@
 
     <?php require('html/head.php'); ?>
     
-<body class="sortable-handler">
+<body class="sortable-handler hidden">
 
 	<header id="top-header" class="sect-1 droid">
         
@@ -371,6 +371,11 @@
     
         <img class="pos-ab" src="img/aPopUp/loading.svg" />
     
+    </div>
+    
+    <div id="main-loader">
+        <img class="pos-ab" src="img/aPopUp/loading.svg" />
+        <p>Loading...</p>
     </div>
     
     <script src="js/functions-global.js"></script>
