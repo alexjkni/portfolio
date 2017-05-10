@@ -4,7 +4,6 @@ body {
 
 body.noscroll {
     overflow: hidden;
-    touch-action: none;
 }
 
 /* Container Style */
@@ -64,7 +63,7 @@ h1 {
 
 #top-header .cv-link {
     font-size:14px;
-    margin-top: 420px;
+    margin-top: 400px;
     text-decoration: none;
 }
 
@@ -126,7 +125,7 @@ h1 span {
 }
 
 #ls {
-    background: transparent url('../img/head/ls-on.png') no-repeat top center;
+    background: transparent url('../img/head/ls-on.png');
     left: 50%;
     margin-left: -175.5px;
     top: 0;
@@ -136,7 +135,7 @@ h1 span {
 }
 
 #ls-switch {
-    background: transparent url('../img/head/ls-pulley.png') no-repeat;
+    background: transparent url('../img/head/ls-pulley.png');
     left: 50%;
     margin: -220px 0 0 250px;
     transition: 0.09 ease-in-out;
@@ -151,10 +150,6 @@ h1 span {
     width: 100%;
     height: 100%;
     z-index: 98;
-}
-
-#ls-shade.change {
-    background: rgba(0, 0, 0, 0.28);
 }
 
 .mp:hover {
@@ -506,13 +501,6 @@ h3 {
     background: rgba(56, 185, 190, 1);
 }
 
-#errorMessage {
-    color: rgb(255, 0, 0);
-    line-height: 27px;
-    margin: 0 auto;
-    padding-bottom: 30px;
-    width: 250px;
-}
 
 /* Changing Form Placeholder Color */
 
@@ -755,35 +743,146 @@ h3 {
     border-right: 1px solid #000;
 }
 
+
+/* Media Queries */
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px),
 (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait), (min-device-width: 640px) and (min-device-height: 360px) and (min-resolution: 200dpi) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     
-    html {
+    #main-icon {
+        display:none;
+    }
+    
+    .b-sect {
+        min-width: 980px;
     }
     
     .container {
-        min-width: 100%;
-        width: 100%;
+        margin: 0;
+        min-width: 980px;
+        width: 980px;
     }
     
     #top-header {
-        background-size: 100%;
-        width: 100%;
-        min-width: 100%;
-        min-height:auto;
+        min-width: 980px;
     }
     
-    /* Nav */
+    #top-header h2 {
+        font-size: 40px;
+        margin-left:-230px;
+        width: 500px;
+    }
     
-    #mobNavIcon {
-        margin-left: 10px;
-        margin-top: 1%;
-        position: fixed;
+    #s-icons li {
+        display:block;
+        margin-right:20px
+    }
+    
+    #s-icons li a {
+        background-size: 180px 85px;
+        opacity:1;
+        width:85px;height:100px;
+    }
+    
+    #s-icons li.email a {
+        background-position:-91px 0;
+    }
+    
+    #info {
+        padding-bottom:40px;
+    }
+    
+    #info .box {
+        display: block;
+        margin: 0 auto;
+        padding: 40px 0;
+        width: 75%;height:520px;
+    }
+    
+    #info section h3 {
+        padding-top:40px;
+        font-size:100px;
+    }
+    
+    #info section p, #my-work .sub-text {
+        font-size: 30px;
+        line-height: 65px;
+    }
+    
+    #info .b-l {
+        font-size:40px;
+    }
+    
+    #info #debug.box {
+        margin-bottom:50px;
+    }
+    
+    #my-work .sub-text {
+        width:500px;
+    }
+    
+    #about h2,
+    #about p {
+        margin: 12px auto 60px;
+        position: relative;
+    }
+    
+    #about h2, #my-work h2 {
+        font-size:100px;
+        line-height:110px;
+        margin-bottom:140px;
+        width:400px;
+    }
+    
+    #about p {
+        font-size:30px;
+        line-height:60px;
+    }
+    
+    #about p:last-child {
+        margin-bottom: 0px;
+    }
+    
+    #my-work .container {
+        height: auto;
+    }
+    
+    #my-work h2,
+    #my-work .sub-text,
+    #my-work .work-container {
+        margin: 0 auto 70px;
+        position: relative;
         top: 0;
-        transition: 0.4s;
-        z-index: 101;
-        width: 10%;
-        height: 10%;
+        left: 0;
+        right: 0;
+    }
+    
+    #my-work .work-container {
+        margin-bottom: 0;
+        width:700px;height:1300px;
+    }
+    
+    #my-work .work-container img {
+        width:700px;
+    }
+    
+    #my-work .work-piece p {
+        font-size: 25px;
+        line-height: 35px;
+        margin-top: 155px;
+    }
+    
+    #my-work #Chronos p {
+        margin-top: 175px;
+    }
+    
+    /* Nav Bar */
+    #mobNavIcon {
+        margin-left:10px;
+        padding:30px 40px 30px 30px;
+        position:fixed;
+        transition:0.4s;
+        z-index:101;
     }
     
     #main-nav.change {
@@ -791,17 +890,16 @@ h3 {
     }
     
     .bar {
-        background: #FFF;
-        border-radius: 2px;
+        background:#FFF;
+        border-radius:2px;
         box-shadow: 0px 0px 25px #38b9be;
-        margin: 5px 0;
-        transition: 0.4s;
-        height: 8%;
-        width: 100%;
+        margin:12px 0;
+        transition:0.4s;
+        width:85px;height:12px;
     }
     
     #mobNavIcon.change {
-        margin-left: 0;
+        margin-left: 11.5%;
     }
     
     .change .bar {
@@ -809,8 +907,8 @@ h3 {
     }
 
     .change .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-5px, 20px);
-        transform: rotate(-45deg) translate(-5px, 20px);
+        -webkit-transform: rotate(-45deg) translate(-22px, 20px);
+        transform: rotate(-45deg) translate(-22px, 20px);
     }
 
     .change .bar2 {
@@ -818,17 +916,19 @@ h3 {
     }
 
     .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(5px, -9px);
-        transform: transform: rotate(45deg) translate(5px, -9px);
+        -webkit-transform: rotate(45deg) translate(-14px, -10px) ;
+        transform: transform: rotate(45deg) translate(-14px, -10px);
     }
-    
-     #main-nav {
+      
+    #main-nav {
         background: #38b9be;
+        border-right: 1px solid #FFF;
         box-shadow: 0px 0px 200px rgba(0, 0, 0, 0.75);
-        margin-left:-130%;
+        margin-left:-500px;
         position: fixed;
+        left: 0;
         z-index: 100;
-        width: 100%;height: 100%;
+        width:375px;
     }
     
     #main-nav span {
@@ -846,22 +946,17 @@ h3 {
     #main-nav ul {
         margin: 0;
         padding-top:150px;
-        position: absolute;
-        bottom: 0;
-        width:100%;
     }
     
     #main-nav li {
         border-top: 1px solid #FFF;
         display: block;
-        width:100%;
     }
     
     #main-nav li a {
         display: block;
-        font-size: 2em;
-        padding: 10% 7%;
-        width:100%;
+        font-size: 40px;
+        padding: 40px 30px;
     }
     
     #main-nav li:after {
@@ -870,264 +965,44 @@ h3 {
     #main-nav li:last-child {
         border-bottom: 1px solid #FFF;
     }
-    
-    h1 {
-        letter-spacing: 0.4em;
-        line-height: 120px;
-        margin-left: 0;
-        padding-top: 30%;
-        left: 0;
-        margin-top: 0;
-        width: 100%;height: auto;
-        word-spacing: 999px;
-    }
-    
-    h1.pos-ab {
-        position:relative;
-    }
-    
-    h1 span {
-        background-size: 100%;
-        margin-left: -34px;
-        margin-top: 80px;
-        left: 50%;
-        width: 60px;
-        height: 70px;
-    }
-    
-    #top-header h2 {
-        position: relative;
-        margin: 0;
-        margin-top: -7.5%;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-    }
-    
-    #top-header .cv-link {
-        margin: 0;
-        margin-top: 4%;
-        padding-bottom: 45%;
-        position: relative;
-        display: block;
-        left: 0;
-        width: 100%;
-    }
-    
-    img.j-spin {
-        display:none;
-    }
-    
-    #s-icons {
-        margin: 2%;
-        top:0;
-    }
-    
-    #s-icons li {
-        display: block;
-    }
-    
-    #s-icons li a {
-        background-size: 200%;
-        width: 40px;height: 40px;
-    }
-    
-    #s-icons li.email a {
-        background-position-x: -40px;
-    }
-    
-    #ls {
-        background-size: 70%;
-        left: 0;
-        margin-left: 0;
-        width: 100%;height: 300px;
-    }
-    
-    #ls-switch {
-        top: 0;
-        right: 0;
-        margin: -240px 0 0 10%;
-    }
-    
-    #ls-shade {
-        top:0;
-    }
-    
-    #info {
-        padding: 50px 0;
-    }
-    
-    #info, #info section, #about, #my-work, #my-technologies, #contact-me {
-        min-width: 100%;
-        padding-bottom: 0;
-    }
-    
-    #info {
-        padding-bottom: 60px;
-    }
-    
-    #info section {
-        padding-top:0;
-        display:block;
-    }
-    
-    #info section#debug {
-        margin-bottom: 0;
-    }
-    
-    #info section p {
-        max-width: 324px;
-        width: 100%;
-    }
-    
-    #about h2, #my-work h2 {
-        display: block;
-        margin: 0;
-        position: relative;
-        width: 100%;height: auto;
-    }
-    
-    #about p {
-        width: 90%;
-        margin: 30px auto 0;
-    }
-    
-    #my-work .container, #my-technologies .container {
-        padding: 40px 0;
-    }
-    
-    #my-work h2 {
-        left:0;
-        margin:0;
-    }
-    
-    #my-work .sub-text {
-        position: relative;
-        margin: 20px auto;
-        width: 300px;
-        text-align: center;
-    }
-    
-    #my-work .work-piece p {
-        width: 90%;
-        padding: 0;
-        margin: 40px auto 15px;
-    }
-    
-    #my-work .work-container {
-        margin: 0 auto;
-        overflow:hidden;
-        width:90%;height:auto;
-    }
-    
-    #my-work .work-piece img {
-        width: 100%;
-    }
-    
-    #my-technologies h2 {
-        padding: 0;
-        line-height: 1.5em;
-    }
-
-    #my-tech-container {
-        margin: 30px auto 0;
-        width: 90%;height: auto;
-    }
-    
-    #my-tech-container .tech-bar-cont {
-        display:block;
-        margin-bottom: 15px;
-        width:100%;height:auto;
-    }
-    
-    #my-tech-container .tech-bar-cont h5 {
-        font-size:1.4em;
-        margin-bottom: 7.5px;
-        position: relative;
-        text-align: left;
-    }
-    
-    #my-tech-container .tech-bar {
-        left:0;
-        margin:0 0 30px;
-        position:relative;
-        width:100%;height:25px;
-    }
-    
-    #my-tech-container .tech-bar-fill {
-        width:0;height:100%;
-    }
-    
-    #contact-me {
-        padding-bottom:20px;
-    }
-    
-    #contact-me form {
-        left: 0;
-        margin: 0 auto;
-        width: 90%;
-    }
-    
-    #contact-me input, #contact-me textarea {
-        padding: 10px 0;
-        text-indent: 10px;
-    }
-    
-    #contact-me .btn {
-        width:100%;
-    }
-    
     #aPopUp {
-        border:0;
         left: 0;
         width: 100%;
         height: 835px;
     }
-    
     #aPopUp.change {
         height: 100%;
         margin: 0;
         top: 0;
     }
-    
     #aPopUp div.pos-ab {
         position: relative;
         height: 50%;
         width: 100%;
     }
-    
-    #aPopUpLeft p {
-        margin: 0 0 4% 0;
+    #aPopUpLeft, #aPopUpRight {
+        min-height:871.5px;
     }
-    
+    #aPopUpLeft p {
+        font-size: 40px;
+        line-height: 55px;
+        margin: 0 0 6% 0;
+    }
     #aPopUp.Chronos #aPopUpLeft p {
         margin: 0 0 3% 0;
     }
-    
-    #aPopUpLeft h3 {
-        padding: 40px 0 10px;
-        margin-top: 0;
-    }
-    
-    #aPopUpLeft .work-site {
-        margin: 10px 0;
-    }
-    
     #aPopUp.search-company #aPopUpLeft h3 {
-        font-size: 2em;
+        font-size: 60px;
+        line-height: 60px;
     }
-    
-    #aPopUpLeft p {
-        font-size: 80%;
-        line-height: 141%;
+    #aPopUp.search-company #aPopUpLeft a {
+        margin-top: 40px;
     }
-    
     #aPopUp.search-company #aPopUpLeft p {
-        font-size: 0.79em;
-        margin: 0 0 3%;
+        margin: 0 0 3.4%;
     }
     #aPopUpRight a {
-        height: 32%;
+        height: 270px;
     }
     
     #aPopUp.search-company #aPopUpRight a, #aPopUp.Chronos #aPopUpRight a {
@@ -1136,20 +1011,89 @@ h3 {
     }
     
     #aPopUpRight .img {
-        margin: 0;
-        margin-top:10px;
+        margin: 24px 17.5px 0;
         width: 95%;
         -moz-transition: all 0.3s;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
     }
+    #aPopUpLeft h3 {
+        font-size: 100px;
+    }
+    
+    #aPopUpLeft .work-site {
+        font-size: 30px;
+        margin-top: 70px;
+    }
+    
     #aPopUpClose {
-        font-size: 2em;
+        font-size: 40px;
         bottom: 0;
-        width: 20%;height: 10%;
+        width: 100px;
+        height: 100px;
         border: 1px solid #000;
         border-right: 0;
         border-bottom: 0;
+    }
+    
+    /* Technologies */
+    
+    #my-technologies {
+        padding: 0 0 40px 0;
+    }
+    
+    #my-tech-container {
+        height:auto;
+    }
+    
+    #my-tech-container .tech-bar-cont {
+        display: block;
+        width: 100%;
+        height: 100px;
+    }
+    
+    #my-tech-container .tech-bar-cont h5 {
+        margin-top: -30px;
+        text-align: left;
+        font-size: 32px;
+        top: 0;
+    }
+    
+    #my-tech-container .tech-bar {
+        background: #FFF;
+        border-radius: 2px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+        left: 0;
+        margin-left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 25px;
+    }
+    
+    #my-tech-container .tech-bar-fill {
+        background: #a4b8b9;
+        bottom: 0;
+        width: 0%;
+        height: 100%;
+    }
+    
+    #contact-me form {
+        left: 0;
+        margin: 40px 0 0;
+        margin: 0 auto;
+        width: 800px;
+    }
+    
+    #contact-me input, #contact-me textarea {
+        font-size: 30px;
+    }
+    
+    #contact-me input {
+        height:75px;
+    }
+    
+    #contact-me .btn {
+        width: 820px;height: 100px;
     }
     
 }
@@ -1157,18 +1101,28 @@ h3 {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape),
 (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), (min-device-width: 640px) and (min-device-height: 360px) and (min-resolution: 200dpi) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)  {
     
-    #ls {
-        background-size: 40%;
+    #main-nav {
+        width:375px;height:100%;
+    }
+    
+    #main-nav ul {
+        position:absolute;
+        bottom:0;
+        width:100%;
+    }
+    
+    #main-nav li a {
+        padding:8% 0 8% 30px;
+    }
+    
+    #mobNavIcon {
+        z-index: 99;
+    }
+    
+    #mobNavIcon.change {
+        margin-left:25px;
     }
 
-    h1 {
-        padding-top:20%;
-    }
-    
-    #top-header h2 {
-        margin-top: -3.5%;
-    }
-    
     #aPopUp div.pos-ab {
         position: absolute;
         width: 50%;height: 100%;
@@ -1189,13 +1143,13 @@ h3 {
     }
     
     #aPopUpLeft p {
-        font-size: 0.799em;
-        line-height: 156%;
-        margin: 0 0 3% 0;
+        font-size: 20px;
+        line-height: 28px;
+        margin: 0 0 15px 0;
     }
     
     #aPopUpRight a {
-        height: 32.5%;
+        height: 176px;
     }
     
     #aPopUp.Chronos #aPopUpLeft p {
@@ -1207,8 +1161,8 @@ h3 {
     }
     
     #aPopUp.search-company #aPopUpLeft p {
-        margin: 2% 0;
-        line-height: 150%;
+        margin: 15px 0;
+        line-height: 27px;
     }
     
     #aPopUpClose {
@@ -1222,29 +1176,4 @@ h3 {
         margin: 20px 0;
     }
     
-    #main-nav li a {
-        font-size: 140%;
-        padding: 3% 3%;
-    }
-    
-    #mobNavIcon {
-        margin-top:5px;
-        width: 45px;
-    }
-
-    .bar {
-        height: 5px;
-    }
-    
-    #my-work .work-container {
-        width: 75%;height:900px;
-    }
-    
-    #my-work .work-piece img {
-        width: 100%;
-    }
-    
-    #my-work .work-piece p {
-        margin-top: 75px;
-    }
 }

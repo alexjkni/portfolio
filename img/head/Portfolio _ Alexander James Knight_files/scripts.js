@@ -2,14 +2,14 @@
 var akConsole, sTimer, deviceMobile;
 
 sTimer = new Date().getTime();
-akConsole = akToolKit.console(1, 'Portfolio');
+akConsole = akToolKit.console(0, 'Portfolio');
 akToolKit.deviceMobile = akToolKit.mobileCheck();
 
 akToolKit.akConsole = akConsole;
 akConsole.log('Loading DOM');
 
 jQuery(document).ready(function () {
-    
+
     var eTimer;
 
     akConsole.log(akToolKit.checkExecTime(sTimer));
@@ -20,14 +20,6 @@ jQuery(document).ready(function () {
 });
 
 function mainFunction() {
-    
-    document.addEventListener('touchstart', touchStart);
-    
-    function touchStart(e) {
-
-        e.preventDefault();
-
-    }
 
     var imgLocationsArr = ['img/head/ls-off.png'];
     akToolKit.preloadImgs(imgLocationsArr);
@@ -63,7 +55,6 @@ function mainFunction() {
 
     function moveNavBarMob(elem) {
         
-        jQuery('body').toggleClass('noscroll');
         jQuery(elem).toggleClass('change', 300);
         elemNavBar.toggleClass('change', 300);
         
@@ -102,21 +93,24 @@ function mainFunction() {
     // Light Logic
     jQuery('#ls-switch').click(function (e) {
 
-        var elemToSwitch, imgToSwitch, overlayElem;
+        var elemToSwitch, imgToSwitch, elemShade, overlayElem;
 
         akConsole.log(e.type + ' event occurred');
 
         elemToSwitch = jQuery('#ls');
         imgToSwitch = elemToSwitch.css('background-image').indexOf('ls-on.png');
+        elemShade = 'rgba(0, 0, 0, ';
         overlayElem = jQuery('#ls-shade');
 
         switch (imgToSwitch) {
 
             case -1:
                 imgToSwitch = 'img/head/ls-on';
+                elemShade += '0.07)';
                 break;
             default:
                 imgToSwitch = 'img/head/ls-off';
+                elemShade += '0.28)';
                 break;
 
         }
@@ -128,11 +122,12 @@ function mainFunction() {
 
         setTimeout(function () {
 
-            overlayElem.toggleClass('change');
+            overlayElem.css('background', elemShade);
 
         }, 10);
 
         akConsole.log(elemToSwitch[0].id + ' background is now ' + imgToSwitch);
+        akConsole.log(overlayElem[0].id + ' is now ' + elemShade);
 
     });
 
@@ -547,6 +542,10 @@ function mainFunction() {
             var errorElem = jQuery('<p>');
             errorElem.attr('id', 'errorMessage');
             errorElem.text("Oops, you haven't filled in the required fields correctly!");
+            errorElem.css({
+                'color': 'red',
+                'padding-bottom': '20px'
+            });
             errorElem.insertAfter('#contact-me h4');
 
         }
@@ -563,23 +562,7 @@ function mainFunction() {
     }
 
     // My Technologies Animation
-    var techP, techBars, techBarsFull;
-    
-    techBarsFull = false;
-    techP = [];
-
-    techBars = jQuery('#my-tech-container .tech-bar-cont');
-    
-    akConsole.dir(techBars.find('p'));
-    
-    techBars.find('p').each(function() {
-        
-        techP.push(this.textContent);
-        this.textContent = '0%';
-        
-    });
-    
-    akConsole.dir(techP);
+    var techBarsFull = false;
 
     $(window).scroll(function () {
 
@@ -615,20 +598,16 @@ function mainFunction() {
 
         techBarsFull = true;
 
-        jQuery('#my-tech-container .tech-bar-fill').each(function (index) {
+        var elemsToAnimate = jQuery('#my-tech-container .tech-bar-fill').each(function () {
 
             var curElem, newVal, animTime;
-            
-            akConsole.log(index);
 
             animTime = Math.floor(Math.random()*(2500-2000+1)+2000);
             curElem = jQuery(this);
-            newVal = techP[index];
+            newVal = this.parentElement.parentElement.children[1].innerText;
             
             var animObj = attr ? {"height": newVal} : {"width": newVal};
-            
-            akConsole.dir(techBars[index]);
-            
+
             curElem.animate(animObj , animTime, 'easeOutBounce');
 
         });

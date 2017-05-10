@@ -5,14 +5,15 @@
 
     <?php require('html/head.php'); ?>
     
-<body>
+<body class="sortable-handler">
 
 	<header id="top-header" class="sect-1 droid">
         
 	   <div class="container">
         
-           <h1 class="pos-ab">Alexander <span class="pos-ab j-spin">J</span> Knight</h1>
+           <h1 class="pos-ab">Alexander<span class="pos-ab j-spin">J</span> Knight</h1>
            <h2 class="pos-ab">Designer &amp; Developer</h2>
+           <a class="pos-ab cv-link" href="files/Alexander Knight (CV).pdf" title="Alexander Knight CV Download">Download My CV!</a>
            
            <img class="pos-ab j-spin" id="main-icon" src="img/head/icon.png" alt="J" />
            
@@ -96,7 +97,7 @@
             
             <p>I'm an experienced designer &amp; developer. I mostly specialize in Front-End development and am a graduate of the University of Brighton where I achieved a 2:1 in Digital Media Development.</p>
             
-            <p>The work I provide of the highest possible quality. I thoroughly understand every step of a website's development. I take care that every project is well-documented so that team members &amp; clients have full understanding of what the end result can do.</p>
+            <p>The work I provide is of the highest quality possible. I thoroughly understand every step of a website's development. I take care that every project is well-documented so that team members &amp; clients have full understanding of what the end result can do.</p>
             
             <p>Even as a coder I understand that the front-end portion of a website is the most important part as it is what your users will see the most. Ensuring the final solution matches both the intended design &amp; the proposed user experience is of great importance.</p>
             
@@ -146,7 +147,7 @@
                     
                     <img src="img/my-work/search-company/cover.jpg" alt="Chronos Energy" />
                     
-                    <p>A mini project to to develop a simple system where a user can perform a simple search for a registered company name. This utilizes PHP Laravel Framework &amp; AngularJs.</p>
+                    <p>A mini project to develop a simple system where a user can perform a simple search for a registered company name. This utilizes PHP Laravel Framework &amp; AngularJs.</p>
                     
                     <a href="#" class="popLink link-overlay pos-ab">Read More</a>
                     
@@ -335,7 +336,7 @@
                 <a href="#"></a>
             </h3>
             
-            <a href="#" class="work-site"></a>
+            <a href="#" class="work-site" target="_blank"></a>
             
             <p></p>
                 
@@ -380,6 +381,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script id="" src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed|Source+Code+Pro" rel="stylesheet">
-    
+
 </body>
 </html>
