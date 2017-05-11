@@ -2,7 +2,7 @@
 var akConsole, sTimer, deviceMobile;
 
 sTimer = new Date().getTime();
-akConsole = akToolKit.console(1, 'Portfolio');
+akConsole = akToolKit.console(0, 'Portfolio');
 akToolKit.deviceMobile = akToolKit.mobileCheck();
 
 akToolKit.akConsole = akConsole;
@@ -689,29 +689,3 @@ function mainFunction() {
     }
 
 }
-
-/*
-$('.counter').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-count');
-  
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
-
-  {
-
-    duration: 8000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function() {
-      $this.text(this.countNum);
-      //alert('finished');
-    }
-
-  });  
-  
-});
-*/
