@@ -374,7 +374,7 @@
     </div>
     
     <div id="main-loader">
-        <img class="pos-ab" src="img/aPopUp/loading.svg" />
+        <img src="img/aPopUp/loading.svg" />
         <p>Loading...</p>
     </div>
     

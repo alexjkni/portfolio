@@ -6,14 +6,17 @@ body script {
     display:none !important;
 }
 
+/* Body Load Animation */
 
-body.hidden > * {
-    display:block;
+body.show > * {
+    opacity:1;
 }
 
-#main-loader {
-    display:none;
+#main-loader.hide {
+    opacity:0;
 }
+
+/* */
 
 body.noscroll {
     overflow: hidden;

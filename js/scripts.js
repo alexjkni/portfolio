@@ -20,8 +20,6 @@ jQuery(document).ready(function () {
     
     loadCSS(arrCSS);
     mainFunction();
-    
-    jQuery(document).bind("mobileinit", function(){$.extend(  $.mobile , {autoInitializePage: false})});
 
 });
 
@@ -41,6 +39,15 @@ function loadCSS(arr) {
         docHead.append(elemCSS);
         
     }
+    
+    jQuery('#main-loader').addClass('hide');
+
+    setTimeout(function(){
+        
+        jQuery('body').addClass('show');
+        jQuery('#main-loader').remove();
+        
+    }, 500);
 
 }
 
