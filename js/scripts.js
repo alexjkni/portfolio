@@ -23,6 +23,19 @@ jQuery(document).ready(function () {
 
 });
 
+jQuery(window).on('load', function() {
+    
+    jQuery('#main-loader').addClass('hide');
+    jQuery('body').addClass('show');
+    
+    setTimeout(function() {
+        
+        jQuery('#main-loader').remove();
+        
+    }, 1000);
+    
+});
+
 function loadCSS(arr) {
     
     var elemCSS, docHead, elemArr;
@@ -39,15 +52,6 @@ function loadCSS(arr) {
         docHead.append(elemCSS);
         
     }
-    
-    jQuery('#main-loader').addClass('hide');
-
-    setTimeout(function(){
-        
-        jQuery('body').addClass('show');
-        jQuery('#main-loader').remove();
-        
-    }, 500);
 
 }
 
