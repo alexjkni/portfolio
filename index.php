@@ -13,7 +13,7 @@
         
            <h1 class="pos-ab">Alexander<span class="pos-ab j-spin">J</span> Knight</h1>
            <h2 class="pos-ab">Designer &amp; Developer</h2>
-           <a class="pos-ab cv-link" href="files/Alexander Knight (CV).pdf" title="Alexander Knight CV Download">Download My CV!</a>
+           <a class="pos-ab cv-link" href="files/Alexander%20Knight%20(CV).pdf" title="Alexander Knight CV Download">Download My CV</a>
            
            <img class="pos-ab j-spin" id="main-icon" src="img/head/icon.png" alt="J" />
            
@@ -123,7 +123,7 @@
                     
                     <img src="img/my-work/chronos/cover.jpg" alt="Chronos Energy" />
                     
-                    <p>Chronos Energy &amp Utilities is a Recruitment company based in Birmingham. The site is being developed using HTML, CSS, JavaScript, jQuery, jQuery UI under the WordPress platform.</p> 
+                    <p>Chronos Energy &amp; Utilities is a Recruitment company based in Birmingham. The site is being developed using HTML, CSS, JavaScript, jQuery, jQuery UI under the WordPress platform.</p> 
                     
                     <a href="#" class="popLink link-overlay pos-ab">Read More</a>
                     
@@ -351,7 +351,7 @@
         <div id="aPopUpRight" class="pos-ab">
             
             <a href="#" target="_blank">
-                <img sr="" class="img" />
+                <img src="" class="img" />
             </a>
             
             <a href="#" target="_blank">

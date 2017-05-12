@@ -1,6 +1,5 @@
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Cache-control" content="public">
 
     <title><?php echo $SITENAME; ?></title>
     <meta name="description" content="<?php echo $SITENAME; ?>">
