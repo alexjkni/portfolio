@@ -12,7 +12,7 @@
         $cssNames = ["reset.css","style.css"];
         getFileFromPath($CSSPATH, $cssNames); 
     
-        // Adding HTML5Shive File
+        // Adding HTML5Shiv File
         require('htmlshiv.php'); 
     
     ?>
