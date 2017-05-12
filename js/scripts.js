@@ -2,7 +2,7 @@
 var akConsole, sTimer, deviceMobile;
 
 sTimer = new Date().getTime();
-akConsole = akToolKit.console(1, 'Portfolio');
+akConsole = akToolKit.console(0, 'Portfolio');
 akToolKit.deviceMobile = akToolKit.mobileCheck();
 
 akToolKit.akConsole = akConsole;
@@ -10,14 +10,50 @@ akConsole.log('Loading DOM');
 
 jQuery(document).ready(function () {
     
-    var eTimer;
+    var eTimer, arrCSS;
 
     akConsole.log(akToolKit.checkExecTime(sTimer));
 
     akConsole.fun(mainFunction);
+    
+    arrCSS = ['reset.css', 'style.css'];
+    
+    loadCSS(arrCSS);
     mainFunction();
 
 });
+
+jQuery(window).on('load', function() {
+    
+    jQuery('#main-loader').addClass('hide');
+    jQuery('body').addClass('show');
+    
+    setTimeout(function() {
+        
+        jQuery('#main-loader').remove();
+        
+    }, 1000);
+    
+});
+
+function loadCSS(arr) {
+    
+    var elemCSS, docHead, elemArr;
+    
+    elemArr = [];
+    docHead = document.getElementsByTagName('head')[0];
+    
+    for (var i = 0; i < arr.length; i++) {
+        
+        elemCSS = document.createElement('link');
+        elemCSS.setAttribute('rel', 'stylesheet');
+        elemCSS.setAttribute('href', './css/' + arr[i]);
+        
+        docHead.append(elemCSS);
+        
+    }
+
+}
 
 function mainFunction() {
     
@@ -653,29 +689,3 @@ function mainFunction() {
     }
 
 }
-
-/*
-$('.counter').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-count');
-  
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
-
-  {
-
-    duration: 8000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function() {
-      $this.text(this.countNum);
-      //alert('finished');
-    }
-
-  });  
-  
-});
-*/
